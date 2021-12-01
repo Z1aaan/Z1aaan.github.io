@@ -1,0 +1,108 @@
+/* LOGO STYLE */
+.logo-design {
+  background-color: blue;
+
+  padding: 5px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+
+  line-height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+
+  margin: auto;
+}
+
+.logo-design:hover {
+  background-color: red;
+
+  font-weight: ;
+}
+
+.logo-text {
+  color: white;
+
+  font-family: "Courier New", Courier, monospace;
+
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+
+  text-decoration: none;
+}
+
+/* NAVIGATION STYLE */
+.sidenav {
+  height: 100%;
+  width: 210px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav .links {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  font-weight: 200;
+  color: white;
+  display: block;
+}
+
+.sidenav .links:hover {
+  color: red;
+  font-size: 15px;
+  background-color: black;
+}
+
+.backPortal {
+  padding: 10px;
+  background-color: red;
+
+  color: black;
+  text-decoration: none;
+
+  bottom: 0;
+  right: 0;
+  position: fixed;
+}
+
+.backTop {
+  padding: 10px;
+  background-color: red;
+
+  color: black;
+  text-decoration: none;
+
+  bottom: 0;
+
+  position: fixed;
+}
+
+.backTop:hover,
+.backPortal:hover {
+  background-color: black;
+  color: red;
+}
+
+.backTop:active,
+.backPortal:active {
+  background-color: blue;
+  color: white;
+}
+
+.body {
+  margin-left: 75mm;
+  margin-right: 75mm;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .rubik-font {
+        font-family: "Rubik", sans-serif;
+      }
+    </style>
+    <title>Z</title>
+    <link rel="shortcut icon" href="/images/favicon-16x16.png" />
+  </head>
+  <body>
+    <p style="color: black">Hello! ~secret~</p>
+    <div class="center">
+      <h1 class="logo-design logo-text">Z</h1>
+    </div>
+    <br />
+    <div class="text-body">
+      <div>
+        <h2 class="center title rubik-font">
+          Zhean Ganituen <br />
+          2021
+        </h2>
+      </div>
+      <table class="center">
+        <tr>
+          <td>
+            <a class="not-hover text-body rubik-font" href="/Z/index.html"
+              >WEBSITE</a
+            >
+            <div class="on-hover rubik-font">
+              My Website <br />
+              And Portfolio
+            </div>
+          </td>
+
+          <td class="table-spacing">---</td>
+
+          <td>
+            <a
+              class="not-hover text-body rubik-font"
+              target="_blank"
+              href="https://github.com/Z1aaan"
+              >GITHUB</a
+            >
+            <div class="on-hover rubik-font">My GitHub</div>
+          </td>
+
+          <td class="table-spacing">---</td>
+
+          <td>
+            <button class="modal-button rubik-font" id="myBtn">PROJECTS</button>
+          </td>
+
+          <td class="table-spacing">---</td>
+
+          <td>
+            <a class="on-click-discord text-body rubik-font" href="#discordId"
+              >DISCORD</a
+            >
+            <br />
+            <a
+              class="on-click-discord text-body rubik-font"
+              name="discordId"
+            ></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+          <table>
+            <tr>
+              <div class="modal-div">
+                <th class="subtitle">Epytoml</th>
+                <td class="table-spacing">---</td>
+                <td>
+                  <a
+                    class="modal-link-body rubik-font center"
+                    target="_blank"
+                    href="https://github.com/Z1aaan/Epytoml"
+                    >GitHub Repo</a
+                  >
+                </td>
+                <td class="table-spacing">---</td>
+                <td>
+                  <a
+                    class="modal-link-body rubik-font center"
+                    target="_blank"
+                    href="https://pypi.org/project/Epytoml/"
+                    >PyPI
+                  </a>
+                </td>
+                <td class="table-spacing">---</td>
+                <td>
+                  <a
+                    class="modal-link-body rubik-font center"
+                    target="_blank"
+                    href="https://z1aaan.github.io/Epytoml-Documentation/"
+                    >Documentation</a
+                  >
+                </td>
+              </div>
+            </tr>
+
+            <tr>
+              <th class="subtitle">PackCollatzer</th>
+              <td class="table-spacing">---</td>
+              <td>
+                <a
+                  class="modal-link-body rubik-font center"
+                  target="_blank"
+                  href="https://github.com/Z1aaan/PackCollatzer"
+                  >GitHub Repo</a
+                >
+              </td>
+              <td class="table-spacing">---</td>
+              <td>
+                <a
+                  class="modal-link-body rubik-font center"
+                  target="_blank"
+                  href="https://pypi.org/project/PackCollatzer/"
+                  >PyPI
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <th class="subtitle">Tkinter Tutorial</th>
+              <td class="table-spacing">---</td>
+              <td>
+                <a
+                  class="modal-link-body rubik-font center"
+                  target="_blank"
+                  href="https://github.com/Z1aaan/Tkinter-Tutorial"
+                  >GitHub Repo</a
+                >
+              </td>
+              <td class="table-spacing">---</td>
+              <td>
+                <a
+                  class="modal-link-body rubik-font center"
+                  target="_blank"
+                  href="https://z1aaan.github.io/Tkinter-Tutorial/"
+                  >Website
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th class="subtitle">Zheans Notes Library</th>
+              <td class="table-spacing">---</td>
+              <td>
+                <a
+                  class="modal-link-body rubik-font center"
+                  target="_blank"
+                  href="/Zheans-Notes-Library/"
+                  >Website</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var modal = document.getElementById("myModal");
+
+    var btn = document.getElementById("myBtn");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+    };
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</html>
