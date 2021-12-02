@@ -6,12 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Z/style.css" />
     <link rel="shortcut icon" href="/images/favicon-16x16.png" />
+    <title>Z - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
+  <style>
+    .rubik-font {
+      font-family: "Rubik", sans-serif;
+    }
+  </style>
 
   <body>
     <a id="top"></a>
     <div style="float: right">
-      <h1 class="logo-design logo-text">Z</h1>
+      <h1 class="logo-design logo-text">
+        <a class="logo-text" href="/index.html">Z</a>
+      </h1>
     </div>
     <div class="sidenav">
       <a class="links" href="/Z/index.html">Home</a>
@@ -21,10 +36,12 @@
       <a class="links" href="TODO: DO CONTACTS PAGE">Contact Me</a>
     </div>
 
-    <div class="body">
-      <h1>Hello and Welcome to Z</h1>
+    <div class="body rubik-font">
+      <h1 class="rubik-font">Hello and Welcome</h1>
+      <h2>My GitHub Profile README.md</h2>
       <details>
-        <summary><code>README.MD</code></summary>
+        <summary><code class="button">README.MD</code></summary>
+        <!-- README.md found in my GitHub Profile README.md -->
         <div>
           <h1 style="font-family: 'Courier New', Courier, monospace">
             Hello!
@@ -337,9 +354,8 @@
           </table>
         </div>
       </details>
-
-      <a class="backPortal" href="/index.html">Back Portal</a>
-      <a class="backTop" href="#top">Back Top</a>
+      <br />
+      <a class="rubik-font backTop" href="#top">Back Top</a>
     </div>
   </body>
 </html>
