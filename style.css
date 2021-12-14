@@ -39,7 +39,6 @@
 .title {
   font-weight: 100;
   font-size: 50px;
-  font-family: "Courier New", Courier, monospace;
 }
 
 .subtitle {
@@ -85,6 +84,19 @@ body {
   color: white;
 }
 
+.link-body-menu {
+  font-size: 25px;
+
+  text-decoration: none;
+  color: blue;
+
+  text-align: center;
+}
+
+.link-body-menu:hover {
+  color: white;
+}
+
 .modal-link-body {
   font-size: 15px;
 
@@ -112,19 +124,9 @@ body {
   text-decoration: underline;
 }
 
-.on-hover {
-  display: none;
-  position: fixed;
-}
-
-.not-hover:hover + .on-hover {
-  display: block;
+.textDisplay-design {
   color: red;
-}
-
-.on-click-discord:target:after {
-  content: "Ziaaan#9904";
-  color: red;
+  font-size: 25px;
 }
 
 .modal-button {
@@ -178,4 +180,13 @@ body {
 
 .close:active {
   color: red;
+}
+
+.removeButtonDeco {
+  text-decoration: none;
+}
+
+.sidenote {
+  color: white;
+  font-size: 12px;
 }

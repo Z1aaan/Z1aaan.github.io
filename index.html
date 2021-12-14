@@ -19,7 +19,7 @@
     <title>Z</title>
     <link rel="shortcut icon" href="/images/favicon-16x16.png" />
   </head>
-  <body>
+  <body onload="startTime()">
     <p style="color: black">Hello! ~secret~</p>
     <div class="center">
       <h1 class="logo-design logo-text">Z</h1>
@@ -27,21 +27,23 @@
     <br />
     <div class="text-body">
       <div>
-        <h2 class="center title rubik-font">
-          Zhean Ganituen <br />
-          2021
-        </h2>
+        <h1 class="center title rubik-font">
+          Zhean Ganituen
+        </h1>
+        <p>
+          <div class="center title rubik-font" id="clock"></div>
+        </p>
       </div>
       <table class="center">
         <tr>
           <td>
-            <a class="not-hover text-body rubik-font" href="/Z/index.html"
+            <a
+              class="not-hover text-body rubik-font"
+              href="/Z/index.html"
+              onmouseover="websiteHover()"
+              onmouseleave="displayClr()"
               >WEBSITE</a
             >
-            <div class="on-hover rubik-font">
-              My Website <br />
-              And Portfolio
-            </div>
           </td>
 
           <td class="table-spacing">---</td>
@@ -51,32 +53,44 @@
               class="not-hover text-body rubik-font"
               target="_blank"
               href="https://github.com/Z1aaan"
+              onmouseover="githubHover()"
+              onmouseleave="displayClr()"
               >GITHUB</a
             >
-            <div class="on-hover rubik-font">My GitHub</div>
           </td>
 
           <td class="table-spacing">---</td>
 
           <td>
-            <button class="modal-button rubik-font" id="myBtn">PROJECTS</button>
-          </td>
-
-          <td class="table-spacing">---</td>
-
-          <td>
-            <a class="on-click-discord text-body rubik-font" href="#discordId"
-              >DISCORD</a
+            <button
+              class="modal-button rubik-font"
+              id="myBtn"
+              onmouseover="projectsHover()"
+              onmouseleave="displayClr()"
             >
-            <br />
-            <a
-              class="on-click-discord text-body rubik-font"
-              name="discordId"
-            ></a>
+              PROJECTS
+            </button>
+          </td>
+
+          <td class="table-spacing">---</td>
+
+          <td>
+            <input
+              value="CONTACT"
+              type="button"
+              name=""
+              id="contactButton"
+              onmouseover="contactButtonPress()"
+              onmouseleave="displayClr()"
+              class="rubik-font text-body"
+              style="background-color: black; border-color: black; color: white"
+            />
           </td>
         </tr>
       </table>
     </div>
+
+    <div id="displayHere" class="center rubik-font textDisplay-design"></div>
 
     <div id="myModal" class="modal">
       <div class="modal-content">
@@ -183,6 +197,8 @@
 
     var span = document.getElementsByClassName("close")[0];
 
+    var buttonPress = false;
+
     btn.onclick = function () {
       modal.style.display = "block";
     };
@@ -196,5 +212,64 @@
         modal.style.display = "none";
       }
     };
+
+    function displayClr() {
+      document.getElementById("displayHere").innerHTML = "";
+    }
+
+    function contactButtonPress() {
+      var displayHere = document.getElementById("displayHere");
+      if (buttonPress != true) {
+        displayHere.innerHTML = `<p>
+          Discord: Ziaaan#9904 <br>
+          Email: <a target="_blank"
+            class="link-body-menu"
+            href="https://mail.google.com/mail/u/0/?fs=1&to=zr.gntn@gmail.com&su=&body=&tf=cm"/>link</a> <br>
+          Twitter:
+          <a target="_blank"
+            class="link-body-menu"
+            href="https://twitter.com/z1aaan"/>@z1aaan</a>
+          </p>`;
+        buttonPress = true;
+      } else {
+        displayHere.innerHTML = "";
+        buttonPress = false;
+      }
+    }
+
+    function websiteHover() {
+      var displayHere = document.getElementById("displayHere");
+      displayHere.innerHTML = `<p>My Website and Code Portfolio</p>`;
+    }
+
+    function githubHover() {
+      var displayHere = document.getElementById("displayHere");
+      displayHere.innerHTML = `<p>My GitHub</p>`;
+    }
+
+    function projectsHover() {
+      var displayHere = document.getElementById("displayHere");
+      displayHere.innerHTML = `<div><p>My Projects</p>
+      <p class="sidenote">Click button to expand.</p></div>`;
+    }
+
+    function startTime() {
+      const today = new Date();
+      let hour = today.getHours();
+      let mins = today.getMinutes();
+      let secs = today.getSeconds();
+      mins = checkTime(mins);
+      secs = checkTime(secs);
+      document.getElementById("clock").innerHTML =
+        hour + ":" + mins + ":" + secs;
+      setTimeout(startTime, 1000);
+    }
+
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      } // add zero in front of numbers < 10
+      return i;
+    }
   </script>
 </html>
